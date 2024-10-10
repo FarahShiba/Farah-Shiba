@@ -6,7 +6,7 @@ export const container = style({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  height: "750px",
+  height: "620px",
 });
 
 export const form = style({
