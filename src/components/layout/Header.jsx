@@ -8,7 +8,7 @@ const Header = () => {
       <Container>
         <Navbar.Brand href="/" className={styles.brand}>
           <GiClothes style={{ color: "aqua", marginRight: "0.5rem" }} />
-          Fashion
+          Fashion Store
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
