@@ -21,7 +21,7 @@ export const form = style({
 export const title = style({
   fontSize: "24px",
   fontWeight: "bold",
-  color: "#4b3621", // Dark brown color for the title
+  color: "#4b3621",
   marginBottom: "1rem",
   borderBottom: "2px solid #4b3621",
   paddingBottom: "0.5rem",
