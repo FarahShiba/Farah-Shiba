@@ -7,5 +7,14 @@ export default defineConfig({
   plugins: [react(), vanillaExtractPlugin()],
   server: {
     port: 3005,
+
+    // https://vitejs.dev/config/server-options.html#server-proxy
+    proxy: {
+      "/api": {
+        target: "http://localhost:4500",
+        changeOrigin: true,
+        secure: false,
+      },
+    },
   },
 });
