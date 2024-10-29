@@ -1,4 +1,3 @@
-import React from "react";
 import * as styles from "./SignUp.css";
 
 function SignUp() {

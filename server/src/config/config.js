@@ -8,5 +8,9 @@ module.exports = {
     storageBucket: process.env.STORAGE_BUCKET_URL,
   },
 
-  //C. AUTH ENVS
+  // [C] AUTH ENVs
+  authentication: {
+    //Application secret for creating a secure web token
+    jwtSecret: process.env.JWT_SECRET,
+  },
 };
