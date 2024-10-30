@@ -2,11 +2,8 @@ import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/themes.css";
 
 export const boxSetting = style({
-  textAlign: "center",
-  padding: vars.space["3x"],
+  paddingLeft: "1px",
   backgroundColor: vars.colors.background,
-  borderRadius: vars.space["1x"],
-  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
   margin: vars.space["3x"],
 });
 
