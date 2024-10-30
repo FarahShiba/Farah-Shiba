@@ -12,6 +12,7 @@ import { useNavigate, Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import authService from "../../services/authService";
 import * as styles from "./SignUp.css";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 function SignUp() {
   const { loginSaveUser } = useAuth();
@@ -120,16 +121,13 @@ function SignUp() {
                 </Button>
                 <div className={styles.socialButtons}>
                   <Button variant="light" className={styles.socialIcon}>
-                    GitHub
+                    <FaGithub />
                   </Button>
                   <Button variant="light" className={styles.socialIcon}>
-                    Instagram
+                    <FaInstagram />
                   </Button>
                   <Button variant="light" className={styles.socialIcon}>
-                    GitHub
-                  </Button>
-                  <Button variant="light" className={styles.socialIcon}>
-                    LinkedIn
+                    <FaLinkedin />
                   </Button>
                 </div>
               </Form>
@@ -138,7 +136,7 @@ function SignUp() {
         </Col>
         <Col md={6} className={styles.welcomeSide}>
           <div className={styles.welcomeBack}>
-            <h2>Welcome Back!</h2>
+            <h2 className="p-1">Welcome Back!</h2>
             <p>Already have an account?</p>
             <br />
             <Link to="/login" className={styles.loginButton}>

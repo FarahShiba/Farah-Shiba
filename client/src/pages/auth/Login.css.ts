@@ -5,7 +5,7 @@ export const container = style({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  height: "800px",
+  height: "45rem",
 });
 
 export const form = style({
@@ -71,7 +71,7 @@ export const welcomeSection = style({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  backgroundColor: "#F6D7B0",
+  backgroundColor: "#ddc8cf",
   height: "100%",
   padding: "7.5rem",
   textAlign: "center",
@@ -79,9 +79,9 @@ export const welcomeSection = style({
 
 export const welcomeTitle = style({
   fontSize: "32px",
-  color: "#4b3621", // Brown color
-  fontWeight: "bold",
-  marginBottom: "1rem",
+  color: "#4b3621",
+  fontWeight: "lighter 20px",
+  marginBottom: "0.5rem",
 });
 
 export const loginButton = style({
@@ -92,6 +92,6 @@ export const loginButton = style({
   borderRadius: "4px",
   fontSize: "16px",
   ":hover": {
-    backgroundColor: "#3b2a1b", // Darker brown hover effect
+    backgroundColor: "#3b2a1b",
   },
 });

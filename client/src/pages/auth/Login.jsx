@@ -104,7 +104,7 @@ function Login() {
         </Col>
         <Col md={6} className={styles.welcomeSection}>
           <h2 className={styles.welcomeTitle}>Welcome Back!</h2>
-          <p>Already have an account?</p>
+          <p className="p-2">Already have an account?</p>
           <Link to="/signup">
             <Button className={styles.loginButton}>Sign Up Here</Button>
           </Link>

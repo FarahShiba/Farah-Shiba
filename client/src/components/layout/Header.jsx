@@ -1,5 +1,4 @@
 import { Navbar, Container, Nav, Button } from "react-bootstrap";
-import { GiClothes } from "react-icons/gi";
 import useAuth from "../../hooks/useAuth";
 import TuLink from "../common/TuLink";
 import * as styles from "./Header.css";
