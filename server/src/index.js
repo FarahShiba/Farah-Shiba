@@ -2,8 +2,10 @@
 require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
+const cors = require("cors");
 //testing import
 const { dbPing } = require("./config/db");
+const corsOptions = require("./config/corsOption");
 //import custom middleware
 const apiErrorHandler = require("./middleware/apiErrorHandler");
 const ApiError = require("./utilities/ApiError");
@@ -14,6 +16,9 @@ const config = require("./config/config");
 
 //init express app instance
 const app = express();
+
+// HTTP Header-setter security & CORS
+app.use(cors(corsOptions));
 
 //access express middleware
 app.use(express.json());

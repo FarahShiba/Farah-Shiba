@@ -2,32 +2,29 @@ import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/themes.css";
 
 export const container = style({
-  height: "800px",
   display: "flex",
-  alignItems: "center",
   justifyContent: "center",
+  alignItems: "center",
+  height: "800px",
 });
 
-export const formSide = style({
+export const form = style({
   backgroundColor: "#fff",
   padding: "2rem",
   borderRadius: "8px",
   boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-});
-
-export const formCard = style({
-  backgroundColor: "#fff",
-  padding: "2rem",
-  borderRadius: "8px",
-  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+  width: "100%",
+  maxWidth: "400px",
+  textAlign: "center",
 });
 
 export const title = style({
   fontSize: "24px",
   fontWeight: "bold",
-  color: "#6d4c41", // Darker brown
+  color: "#4b3621",
   marginBottom: "1rem",
-  textAlign: "center",
+  borderBottom: "2px solid #4b3621",
+  paddingBottom: "0.5rem",
 });
 
 export const input = style({
@@ -54,40 +51,47 @@ export const button = style({
   },
 });
 
-export const socialButtons = style({
-  display: "flex",
-  justifyContent: "space-around",
+export const footerText = style({
+  fontSize: "14px",
+  color: "#666",
   marginTop: "1rem",
 });
 
-export const socialIcon = style({
-  padding: "0.5rem 1rem",
-  backgroundColor: "#e0e0e0",
-  borderRadius: "4px",
-  fontSize: "18px",
+export const loginLink = style({
+  color: "#4b3621",
+  textDecoration: "none",
+  fontWeight: "bold",
+  ":hover": {
+    textDecoration: "underline",
+  },
 });
 
-export const welcomeSide = style({
+export const welcomeSection = style({
   display: "flex",
+  flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  backgroundColor: "#f5dcb0",
-  padding: "2rem",
-  borderRadius: "8px",
-});
-
-export const welcomeBack = style({
+  backgroundColor: "#F6D7B0",
+  height: "100%",
+  padding: "7.5rem",
   textAlign: "center",
 });
 
+export const welcomeTitle = style({
+  fontSize: "32px",
+  color: "#4b3621", // Brown color
+  fontWeight: "bold",
+  marginBottom: "1rem",
+});
+
 export const loginButton = style({
-  backgroundColor: "#6d4c41",
+  backgroundColor: "#4b3621",
   color: "#fff",
-  padding: "0.75rem 1rem",
+  border: "none",
+  padding: "0.75rem 1.5rem",
   borderRadius: "4px",
-  // marginTop: "1rem",
-  textDecoration: "none",
+  fontSize: "16px",
   ":hover": {
-    backgroundColor: "#8d6e63",
+    backgroundColor: "#3b2a1b", // Darker brown hover effect
   },
 });

@@ -1,10 +1,11 @@
-// Header.css.ts
 import { style } from "@vanilla-extract/css";
+import { black } from "tailwindcss/colors";
 import { vars } from "../../styles/themes.css";
 
 export const header = style({
   padding: vars.space["2x"],
   boxShadow: "0 1px 4px rgba(0, 0, 0, 0.1)",
+  backgroundColor: "#ceadae",
 });
 
 export const brand = style({
@@ -27,9 +28,27 @@ export const link = style({
   color: vars.colors.textSecondary,
   textDecoration: "none",
   padding: "0.5rem 1rem",
-  borderRadius: "4px",
+  borderRadius: vars.space["1x"],
   ":hover": {
     backgroundColor: vars.colors.grey200,
     color: vars.colors.secondary,
   },
+});
+
+export const authLink = style({
+  marginRight: "1rem",
+  color: vars.colors.textSecondary,
+  textDecoration: "none",
+  padding: "0.5rem 1rem",
+  borderRadius: vars.space["1x"],
+  ":hover": {
+    backgroundColor: vars.colors.grey200,
+    color: vars.colors.secondary,
+  },
+});
+
+export const logoImage = style({
+  width: "45px",
+  height: "auto",
+  marginRight: vars.space["1x"],
 });
