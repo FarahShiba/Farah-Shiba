@@ -56,7 +56,7 @@ module.exports = {
     try {
       const productRef = db.collection("products");
       const snapshot = await productRef
-        .where("onSale", "==", "true")
+        .where("onSale", "==", true)
         .orderBy("name", "asc")
         .limit(10)
         .get();
