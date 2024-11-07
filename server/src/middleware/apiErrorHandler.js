@@ -2,7 +2,7 @@
 const ApiError = require("../utilities/ApiError");
 
 function apiErrorHandler(err, req, res, next) {
-  // E2(b) Middleware Checks if the Error is one of our Pre-Defined Methods ("instanceof")
+  // E2(b) Middleware Checks if the Error is one of our Pre-Defined Methods (instanceof)
   if (err instanceof ApiError) {
     res.status(err.code).json(err.message);
     return;
