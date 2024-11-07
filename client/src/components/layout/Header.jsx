@@ -1,13 +1,15 @@
-import { Navbar, Container, Nav, Button } from "react-bootstrap";
+import { Navbar, Container, Nav, Button, Badge } from "react-bootstrap";
 import useAuth from "../../hooks/useAuth";
 import TuLink from "../common/TuLink";
 import * as styles from "./Header.css";
 import { RiShoppingCartFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import fashionLogo from "../../assets/noun-fashion-2752721.png";
+import { useCart } from "../../context/CartContext";
 
 const Header = () => {
   const { user, logout } = useAuth();
+  const { cart } = useCart();
 
   return (
     <Navbar className={styles.header} variant="light" expand="lg" sticky="top">
@@ -49,8 +51,18 @@ const Header = () => {
                 Logout
               </Button>
             )}
-            <Button variant="outline-dark">
+            <Button
+              as={Link}
+              to="/cart"
+              variant="outline-dark"
+              className={styles.cartButton}
+            >
               <RiShoppingCartFill />
+              {cart.length > 0 && (
+                <Badge bg="secondary" className={styles.cartBadge}>
+                  {cart.length}
+                </Badge>
+              )}
             </Button>
           </Nav>
         </Navbar.Collapse>

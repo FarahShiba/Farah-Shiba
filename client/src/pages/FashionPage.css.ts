@@ -1,35 +1,54 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "../../src/styles/themes.css";
 
-export const container = style({
-  display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "center",
-  textAlign: "center",
-  padding: vars.space["4x"],
-  gap: vars.space["3x"],
+export const fashionPageContainer = style({
+  padding: "2rem 0",
 });
 
-export const card = style({
-  width: "300px",
-  margin: "15% auto",
-  padding: vars.space["3x"],
+export const headerBanner = style({
+  textAlign: "center",
+  marginBottom: "2rem",
+  padding: "2rem",
   backgroundColor: vars.colors.primary,
-  color: vars.colors.textPrimary,
+  color: "#fff",
   borderRadius: "8px",
-  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-  transition: "transform 0.3s",
+});
+
+export const shopButton = style({
+  marginTop: "1rem",
+  padding: "0.75rem 1.5rem",
+  fontSize: "1rem",
+  fontWeight: "bold",
+  backgroundColor: vars.colors.secondary,
+});
+
+export const section = style({
+  marginBottom: "3rem",
+});
+
+export const sectionTitle = style({
+  fontSize: "1.5rem",
+  fontWeight: "bold",
+  marginBottom: "1rem",
+  color: vars.colors.textPrimary,
+});
+
+export const collectionCard = style({
+  overflow: "hidden",
+  borderRadius: "8px",
+  textAlign: "center",
+  transition: "transform 0.3s ease-in-out",
   ":hover": {
     transform: "scale(1.05)",
   },
 });
 
-export const cardTitle = style({
-  fontSize: vars.fontSizes["4x"],
-  marginBottom: vars.space["2x"],
-});
-
-export const cardDescription = style({
-  fontSize: vars.fontSizes["3x"],
-  color: vars.colors.textSecondary,
+export const categoryCard = style({
+  overflow: "hidden",
+  borderRadius: "8px",
+  textAlign: "center",
+  transition: "transform 0.3s ease-in-out",
+  ":hover": {
+    transform: "scale(1.05)",
+  },
 });

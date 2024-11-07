@@ -52,3 +52,16 @@ export const logoImage = style({
   height: "auto",
   marginRight: vars.space["1x"],
 });
+
+export const cartButton = style({
+  position: "relative",
+  display: "flex",
+  alignItems: "center",
+});
+
+export const cartBadge = style({
+  position: "absolute",
+  top: "-5px",
+  right: "-5px",
+  fontSize: "0.75rem",
+});

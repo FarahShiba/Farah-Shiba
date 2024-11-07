@@ -2,6 +2,8 @@
 require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
+const fileUpload = require("express-fileupload");
+const helmet = require("helmet");
 const cors = require("cors");
 //testing import
 const { dbPing } = require("./config/db");
@@ -18,6 +20,7 @@ const config = require("./config/config");
 const app = express();
 
 // HTTP Header-setter security & CORS
+app.use(helmet());
 app.use(cors(corsOptions));
 
 //access express middleware
@@ -25,6 +28,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 //dev request middleware
 app.use(morgan("dev"));
+
+// *NEW* - File parsing middleware
+app.use(fileUpload({ createParentPath: true }));
 
 //home route
 app.use("/api", routes());

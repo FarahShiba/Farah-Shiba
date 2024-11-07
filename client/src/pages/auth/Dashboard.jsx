@@ -29,7 +29,7 @@ const Dashboard = () => {
   return (
     <div className={styles.dashboardContainer}>
       <Card className={`p-4 shadow-lg ${styles.profileCard}`}>
-        <h4 className="text-center mb-4">Profile Overview</h4>
+        <h4 className="text-center mb-4">Hi This Is My Profile</h4>
         <Row>
           <Col md={6}>
             <p>
@@ -40,7 +40,8 @@ const Dashboard = () => {
             </p>
             {user.isAdmin && (
               <p>
-                <strong>Admin Status:</strong> You are an administrator.
+                <strong>Admin Status:</strong> Hello Admin - nice to see you
+                here
               </p>
             )}
           </Col>

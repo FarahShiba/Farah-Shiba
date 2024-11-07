@@ -54,7 +54,7 @@ module.exports = {
         username: username,
         email: email,
         password: await hashPassword(password),
-        isAdmin: false,
+        isAdmin: true,
       });
 
       // Confirm Registration & Convert user details to JSON
