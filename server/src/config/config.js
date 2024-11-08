@@ -1,8 +1,8 @@
 module.exports = {
-  //A. PORT ENVS
+  //[A]. PORT ENVS
   port: process.env.PORT,
 
-  //B. DATABASE ENVS
+  //[B]. DATABASE ENVS
   db: {
     serviceAccountKey: process.env.GOOGLE_APPLICATION_CREDENTIALS,
     storageBucket: process.env.STORAGE_BUCKET_URL,
