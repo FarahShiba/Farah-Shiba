@@ -1,3 +1,4 @@
+//footer component
 import * as styles from "./Footer.css";
 
 const Footer = () => {
