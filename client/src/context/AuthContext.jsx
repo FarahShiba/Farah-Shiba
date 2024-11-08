@@ -24,14 +24,27 @@ export function AuthProvider({ children }) {
   };
 
   // Get Current User Function
+  // function getCurrentUser() {
+  //   try {
+  //     const token = localStorage.getItem("token");
+  //     const savedUser = jwtDecode(token);
+  //     return savedUser;
+  //   } catch (error) {
+  //     return null;
+  //   }
+  // }
+
   function getCurrentUser() {
     try {
       const token = localStorage.getItem("token");
-      const savedUser = jwtDecode(token);
-      return savedUser;
+      if (token) {
+        const savedUser = jwtDecode(token); // Only decode if the token exists
+        return savedUser;
+      }
     } catch (error) {
-      return null;
+      console.error("Error decoding token:", error);
     }
+    return null; // Return null if decoding fails or token is absent
   }
 
   const logout = () => {
